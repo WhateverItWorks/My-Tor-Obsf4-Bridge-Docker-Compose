@@ -38,8 +38,6 @@ services:
     restart: always
     security_opt:
       - no-new-privileges:true
-    cap_drop:
-      - ALL
     networks:
       - obfs4_bridge_external_network
     environment:
