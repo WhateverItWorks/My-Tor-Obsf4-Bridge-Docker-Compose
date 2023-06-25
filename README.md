@@ -45,4 +45,8 @@ And then restarting the container:
 docker-compose up -d obfs4-bridge
 ```
 
+### Advanced
+
+- [Enable Google TCP BBR](https://www.linuxbabe.com/ubuntu/enable-google-tcp-bbr-ubuntu)
+
 Note that your bridge's data directory (which includes its key material) is stored in a docker volume, so you won't lose your bridge's identity when upgrading to the latest docker image. If you are running multiple bridges on your computer, you need to repeat this step for each bridge. We will announce new image versions on the tor-dev mailing list.
