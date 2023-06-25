@@ -52,7 +52,7 @@ services:
     env_file:
       - .env
     volumes:
-      - data:/var/lib/tor
+      - ./data:/var/lib/tor
     ports:
       - ${OR_PORT}:${OR_PORT}
       - ${PT_PORT}:${PT_PORT}
