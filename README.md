@@ -31,6 +31,13 @@ obfs4 5.161.94.149:9999 13736A1904D61E42654F479EBCE84D2F392C3D94 cert=YVmzV4a3fN
 ```
 You can check the status of my bridge relay at https://bridges.torproject.org/status?id=5832F862003F38A0193D05B930F87E3809ADE045
 
+### Verification
+```
+My Tor server's identity key fingerprint is 'whatever 13736A1904D61E42654F479EBCE84D2F392C3D94'
+My Tor bridge's hashed identity key  fingerprint is 'whatever 5832F862003F38A0193D05B930F87E3809ADE045'
+My Tor server's identity key ed25519 fingerprint is 'whatever HLseYgSgAiBO2PGuY7Rs5PEJWTHqJRw8QUencBEKGbw'
+```
+
 ### Upgrade your container
 
 Upgrading to the latest version of our image is as simple as pulling the latest version of the image running:
@@ -44,9 +51,12 @@ And then restarting the container:
 ```
 docker-compose up -d obfs4-bridge
 ```
+Note that your bridge's data directory (which includes its key material) is stored in a docker volume, so you won't lose your bridge's identity when upgrading to the latest docker image. If you are running multiple bridges on your computer, you need to repeat this step for each bridge. We will announce new image versions on the tor-dev mailing list.
+
+
 
 ### Advanced
 
 - [Enable Google TCP BBR](https://www.linuxbabe.com/ubuntu/enable-google-tcp-bbr-ubuntu)
 
-Note that your bridge's data directory (which includes its key material) is stored in a docker volume, so you won't lose your bridge's identity when upgrading to the latest docker image. If you are running multiple bridges on your computer, you need to repeat this step for each bridge. We will announce new image versions on the tor-dev mailing list.
+
