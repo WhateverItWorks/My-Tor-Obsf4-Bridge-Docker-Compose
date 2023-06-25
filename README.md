@@ -29,6 +29,7 @@ This will return a string similar to the following:
 ```
 obfs4 5.161.94.149:9999 13736A1904D61E42654F479EBCE84D2F392C3D94 cert=YVmzV4a3fNnFyD81JTY3fP3KQUF38Oci3EKgEodhs/ZoS2VDu6JGxkqNDt8Xd2fH1xmHFw iat-mode=0
 ```
+You can check the status of my bridge relay at https://bridges.torproject.org/status?id=5832F862003F38A0193D05B930F87E3809ADE045
 
 ### Upgrade your container
 
